@@ -43,7 +43,7 @@ const BudgetingModal = () => {
     <>
       <Tooltip>
         <TooltipTrigger onClick={handleOpen}>
-          <Icon className="size-7" />
+          <Icon className="clamp-[size,5,7]" />
         </TooltipTrigger>
         <TooltipContent align="center" side="bottom" className="text-xs">
           Budgeting
@@ -59,7 +59,7 @@ const BudgetingModal = () => {
         </DialogHeader>
 
         <DialogContent
-          className="sm:max-w-109.5 rounded-[0.625rem] p-0 overflow-hidden"
+          className="sm:max-w-109.5 max-w-[calc(100%-4rem)] rounded-[0.625rem] p-0 overflow-hidden"
           showCloseButton={false}
         >
           <div className="relative h-53.25">
@@ -76,9 +76,12 @@ const BudgetingModal = () => {
 
           <div className="px-5">
             <div className="py-6 max-w-86 mx-auto w-full">
-              <ul className="flex flex-col w-full gap-5 mb-6">
+              <ul className="flex flex-col w-full clamp-[gap,3,5] mb-6">
                 {budgetFeatures.map((item) => (
-                  <li key={item.title} className="flex items-center gap-4">
+                  <li
+                    key={item.title}
+                    className="flex items-center clamp-[gap,3,4]"
+                  >
                     <item.icon className="size-8 text-gray-600 shrink-0" />
                     <div>
                       <h3 className="font-semibold clamp-[text,sm,base] mb-1">

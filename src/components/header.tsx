@@ -35,16 +35,16 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 w-full z-50">
-      <section className="py-7 bg-primary border-b border-gray-100 text-white px-5">
-        <div className="max-w-7xl mx-auto flex items-center gap-y-4 clamp-[gap-x,5,8] flex-wrap">
-          <Logo />
+      <section className="clamp-[pt,5,7] clamp-[pb,4,7] bg-primary border-b border-gray-100 text-white px-5">
+        <div className="max-w-7xl mx-auto flex items-center gap-4 flex-wrap">
+          <Logo className="clamp-[w,36,50]" />
           <div className="flex items-center clamp-[gap,5,6] ms-auto">
             {actions.map(({ id, Component }) => {
               return <Component key={id} />;
             })}
-          </div>
 
-          <ProfileMenu />
+            <ProfileMenu />
+          </div>
         </div>
       </section>
       <section className="px-5 py-3.5 border-b border-gray-100 bg-white">

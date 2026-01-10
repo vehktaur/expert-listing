@@ -7,7 +7,7 @@ const SearchActivity = () => {
   return (
     <Tooltip>
       <TooltipTrigger>
-        <Icon className="size-7" />
+        <Icon className="clamp-[size,5,7]" />
       </TooltipTrigger>
       <TooltipContent align="center" side="bottom" className="text-xs">
         Search Activity
