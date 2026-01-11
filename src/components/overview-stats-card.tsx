@@ -8,7 +8,7 @@ type Props = OverviewStat & {
 
 const OverviewStatsCard = ({ title, Icon, total, metrics }: Props) => {
   return (
-    <article className="rounded-2xl border border-stroke-card w-full overflow-clip">
+    <article className="rounded-2xl h-full flex flex-col border border-stroke-card w-full overflow-clip">
       <header className="flex items-center justify-between bg-hc-bg w-full px-4 py-3.25  font-medium border-b border-stroke-card">
         <h2 className="text-sm flex items-center gap-2.5 text-gray-800">
           <Icon className="size-5 text-blue" />
@@ -20,7 +20,7 @@ const OverviewStatsCard = ({ title, Icon, total, metrics }: Props) => {
         </button>
       </header>
 
-      <div className="px-4 py-5 grid grid-cols-3 gap-4">
+      <div className="px-4 py-5 grid grid-cols-3 gap-4 grow content-center">
         <div>
           <h3 className="text-gray-600 font-medium text-sm mb-2">Total</h3>
           <p className="font-semibold clamp-[text,lg,2xl]">

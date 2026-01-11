@@ -52,7 +52,7 @@ export default function Home() {
               </div>
             </div>
           </section>
-          <section className="xl:max-w-101.5 flex flex-col sm:flex-row xl:flex-col justify-between gap-5">
+          <section className="xl:max-w-101.5 flex flex-col sm:flex-row xl:flex-col justify-stretch clamp-[gap,5,10]">
             {Object.entries(overviewStats).map(([key, data]) => {
               const Icon = icons[key as keyof typeof icons];
               return <OverviewStatsCard key={key} Icon={Icon} {...data} />;

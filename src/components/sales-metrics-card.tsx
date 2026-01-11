@@ -18,7 +18,7 @@ const SalesMetricsCard = ({
   trend,
 }: SalesMetric) => {
   return (
-    <article className="border border-light-gray rounded-xl ps-4 py-2">
+    <article className="border border-light-gray rounded-xl ps-4 py-2 content-center">
       <p
         className={cn(
           "font-semibold clamp-[text,base,1.1875rem] mb-2",
