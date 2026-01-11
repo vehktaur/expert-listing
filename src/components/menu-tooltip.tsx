@@ -9,7 +9,11 @@ const MenuTooltip = ({
   Icon: IconType;
 } & Omit<ComponentProps<typeof AppTooltip>, "trigger">) => {
   return (
-    <AppTooltip {...props} trigger={<Icon className="clamp-[size,5,7]" />} />
+    <AppTooltip
+      {...props}
+      trigger={<Icon className="clamp-[size,5,7]" />}
+      classNames={{ trigger: "cursor-pointer" }}
+    />
   );
 };
 export default MenuTooltip;
