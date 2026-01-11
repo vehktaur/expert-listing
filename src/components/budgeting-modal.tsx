@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type ComponentProps } from "react";
+import { useState } from "react";
 import {
   Dialog,
   DialogClose,
@@ -9,10 +9,10 @@ import {
   DialogHeader,
   DialogTitle,
 } from "./ui/dialog";
-import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
 import { Bars, Calculator as Icon, Settings, TrendUp } from "@/assets/icons";
 import Image from "next/image";
 import images from "@/assets/images";
+import MenuTooltip from "./menu-tooltip";
 
 const budgetFeatures = [
   {
@@ -41,14 +41,9 @@ const BudgetingModal = () => {
 
   return (
     <>
-      <Tooltip>
-        <TooltipTrigger onClick={handleOpen}>
-          <Icon className="clamp-[size,5,7]" />
-        </TooltipTrigger>
-        <TooltipContent align="center" side="bottom" className="text-xs">
-          Budgeting
-        </TooltipContent>
-      </Tooltip>
+      <MenuTooltip Icon={Icon} triggerProps={{ onClick: handleOpen }}>
+        Budgeting
+      </MenuTooltip>
 
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogHeader className="sr-only">

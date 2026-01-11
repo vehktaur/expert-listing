@@ -1,5 +1,6 @@
 import { Home2, Profile } from "@/assets/icons";
 import Listing from "@/components/listing";
+import { MonthlyOverviewChart } from "@/components/overview-chart";
 import OverviewStatsCard from "@/components/overview-stats-card";
 import SalesMetricsCard from "@/components/sales-metrics-card";
 import { listings, overviewStats, salesMetrics } from "@/data";
@@ -42,7 +43,7 @@ export default function Home() {
 
             <div className="mt-4 ps-2 pe-5 flex flex-col xl:flex-row w-full gap-5">
               {/* Chart Placeholder */}
-              <div className="w-full bg-gray-100 rounded-lg"></div>
+              <MonthlyOverviewChart />
 
               <div className="grid grid-cols-[repeat(auto-fill,minmax(min(11.8125rem,100%),1fr))]  gap-y-3 clamp-[gap-x,2,4] w-full">
                 {salesMetrics.map((metric) => (

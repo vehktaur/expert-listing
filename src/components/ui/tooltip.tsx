@@ -63,4 +63,33 @@ function TooltipContent({
   );
 }
 
-export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider };
+function AppTooltip({
+  trigger,
+  children,
+  classNames,
+  triggerProps,
+  contentProps,
+}: {
+  trigger: React.ReactNode;
+  children: React.ReactNode;
+  classNames?: Partial<{ trigger: string; content: string }>;
+  triggerProps?: React.ComponentProps<typeof TooltipPrimitive.Trigger>;
+  contentProps?: React.ComponentProps<typeof TooltipPrimitive.Content>;
+}) {
+  return (
+    <Tooltip>
+      <TooltipTrigger asChild {...triggerProps} className={classNames?.trigger}>
+        {trigger}
+      </TooltipTrigger>
+      <TooltipContent
+        side="bottom"
+        className={cn(classNames?.content)}
+        {...contentProps}
+      >
+        {children}
+      </TooltipContent>
+    </Tooltip>
+  );
+}
+
+export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider, AppTooltip };

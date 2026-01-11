@@ -6,14 +6,15 @@ import {
   Scroll,
   TaskSquare,
   Logo,
+  Marketplace,
+  ActivityLog,
+  PayoutCenter,
 } from "@/assets/icons";
 import NavLink from "./nav-link";
 import ProfileMenu from "./profile-menu";
 import Calendar from "./calendar";
 import BudgetingModal from "./budgeting-modal";
-import SearchActivity from "./search-activity";
-import PayoutCenter from "./payout-center";
-import MarketPlace from "./market-place";
+import MenuTooltip from "./menu-tooltip";
 
 const navList = [
   { label: "Dashboard", icon: Home1, href: "/" },
@@ -24,15 +25,27 @@ const navList = [
   { label: "Tasks", icon: TaskSquare, href: "." },
 ];
 
-const Header = () => {
-  const actions = [
-    { Component: BudgetingModal, id: "Budgeting" },
-    { Component: Calendar, id: "Calendar" },
-    { Component: SearchActivity, id: "Activity Log" },
-    { Component: PayoutCenter, id: "Payout Center" },
-    { Component: MarketPlace, id: "Marketplace" },
-  ];
+const actions = [
+  { Component: BudgetingModal, id: "Budgeting" },
+  { Component: Calendar, id: "Calendar" },
+  {
+    Component: () =>
+      MenuTooltip({ Icon: ActivityLog, children: "Search Activity" }),
+    id: "Search Activity",
+  },
+  {
+    Component: () =>
+      MenuTooltip({ Icon: PayoutCenter, children: "Payout Center" }),
+    id: "Payout Center",
+  },
+  {
+    Component: () =>
+      MenuTooltip({ Icon: Marketplace, children: "Marketplace" }),
+    id: "Marketplace",
+  },
+];
 
+const Header = () => {
   return (
     <header className="sticky top-0 w-full z-50">
       <section className="clamp-[pt,5,7] clamp-[pb,4,7] bg-primary border-b border-gray-100 text-white px-5">

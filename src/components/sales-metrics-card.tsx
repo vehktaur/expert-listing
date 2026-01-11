@@ -4,8 +4,8 @@ import { SalesMetric } from "@/types";
 
 const colors = {
   blue: "text-blue",
-  teal: "text-teal-500",
-  green: "text-[#12B76A]",
+  teal: "text-teal",
+  green: "text-green",
   red: "text-error",
 };
 

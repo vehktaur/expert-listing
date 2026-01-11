@@ -87,3 +87,15 @@ export const listings = [
     })),
   },
 ];
+
+export const chartData = [
+  { month: "Jan", blue: 35, green: 27, red: 10 },
+  { month: "Feb", blue: 5, green: 27, red: 10 },
+  { month: "Mar", blue: 14, green: 6, red: 3 },
+  { month: "Apr", blue: 14, green: 25, red: 10 },
+  { month: "May", blue: 9, green: 2, red: 7 },
+  { month: "Jun", blue: 36, green: 48, red: 7 },
+  { month: "Jul", blue: 23, green: 36, red: 17 },
+  { month: "Aug", blue: 23, green: 6, red: 17 },
+  { month: "Sep", blue: 36, green: 33, red: 6 },
+];

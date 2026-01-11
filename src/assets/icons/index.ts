@@ -17,3 +17,4 @@ export { default as Message } from "./message";
 export { default as Settings } from "./settings";
 export { default as TrendUp } from "./trend-up";
 export { default as Bars } from "./bars";
+export { default as CloseIcon } from "./close-icon";
