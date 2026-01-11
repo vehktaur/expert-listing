@@ -41,7 +41,7 @@ export default function Home() {
               </div>
             </header>
 
-            <div className="mt-4 ps-2 pe-5 flex flex-col xl:flex-row w-full gap-5">
+            <div className="mt-4 pe-5 flex flex-col xl:flex-row w-full gap-5">
               {/* Chart Placeholder */}
               <MonthlyOverviewChart />
 

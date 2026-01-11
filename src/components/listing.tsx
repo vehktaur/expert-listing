@@ -4,12 +4,13 @@ import type { Listing } from "@/types";
 import Image from "next/image";
 import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperNav from "./ui/swiper-nav";
 
 const Listing = ({ title, images, category }: Listing) => {
   return (
-    <div>
+    <div className="relative">
       <Swiper
-        className="h-full"
+        className="h-full relative group"
         modules={[Navigation, Pagination]}
         pagination={{ clickable: true }}
       >
@@ -31,6 +32,8 @@ const Listing = ({ title, images, category }: Listing) => {
             </div>
           </SwiperSlide>
         ))}
+
+        <SwiperNav />
       </Swiper>
     </div>
   );
